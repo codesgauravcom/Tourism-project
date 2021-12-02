@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            background-image: url("https://images.unsplash.com/photo-1503435980610-a51f3ddfee50?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGJveSUyMHdpdGglMjB0YXRvbyUyMGluJTIwbmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+        }
+        .container {
+    border: 2px solid white;
+    margin: 0px 80px;
+    padding: 75px;
+    width: 33%;
+    border-radius: 28px;
+}
+.form-group input {
+    font-family: 'Baloo Bhai', cursive;
+    text-align: center;
+    display: block;
+    width: 508px;
+    padding: 1px;
+    border: 2px solid black;
+    margin: 11px auto;
+    font-size: 25px;
+    border-radius: 8px;
+}
+.container h1 {
+    text-align: center;
+    font-family: 'baloo bhai' cursive;
+}
+
+.container button {
+    display: block;
+    width: 74%;
+    margin: 20px auto;
+}
+.btn {
+    font-family: 'Baloo Bhai', cursive;
+    margin: 0px 9px;
+    background-color: black;
+    color: white;
+    padding: 4px 14px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(31, 30, 30);
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Registeration</h1>
+    <form name="myform"   method="post"  onsubmit=" validateform()">
+        <div class="form-group">
+            <input type="text" name="name" placeholder="Enter your Name">
+        </div>
+        <div class="form-group">
+            <input type="text" name="" placeholder="Enter your Age">
+        </div>
+        <div class="form-group">
+            <input type="text" name="" placeholder="Enter your Gender">
+        </div>
+        <div class="form-group">
+            <input type="text" name="" placeholder="Enter your Locality">
+        </div>
+        <div class="form-group">
+            <input type="text" name="" placeholder="Enter your Email Id">
+        </div>
+        <div class="form-group">
+            <input type="text" id="ss"  name="phone" placeholder="Enter your Phone Number">
+        </div>
+        <button class="btn" onclick="validate()" >Submit</button>
+    </form>
+    <script>
+        function validateform(){ 
+        var name=document.myform.name.value;
+
+    if (name=="null"||name==""){  
+      alert("name can't be blank");
+    }
+    else{
+        alert("sucessfully");
+      }
+    }  
+        function validate(){
+            var number=document.myform.phone.value;
+            
+            if(isNaN(number) || number.length!=10){
+                alert("number not valid")
+                
+            }
+            else{
+                alert("valid")
+            }    
+        } 
+
+    </script>
+    </body>
+</html>    
